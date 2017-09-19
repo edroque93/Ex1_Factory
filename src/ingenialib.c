@@ -21,7 +21,7 @@ void RobotTask(uint8_t u8Command) {
 #endif
   delay(100000); // 100 ms
 #ifdef DEBUG
-  if (!flagStop) { // Robot stop already called, no need to print this
+  if (!flagStop) { // RobotStop already called, no need to print this
     printf("%d: Robot command end\n", TimerGetus() / 1000);
     fflush(stdout);
   }
