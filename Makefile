@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -std=gnu99 -DDEBUG
-LDFLAGS = 
+LDFLAGS = -lpthread
 FORMAT = clang-format-3.8
 SOURCES = $(shell find src/ -iname *.c)
 HEADERS = $(shell find src/ -iname *.h)
