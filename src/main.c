@@ -27,9 +27,11 @@ int main(void) {
     uint8_t command = SPIRead();   // 5 us
     SPIEepromDisable();            // 1 us
     pthread_mutex_unlock(&SPIBus); // SPI unlock
-    RobotTask(command);            // 100 ms
-    if (flagStop)
+    if (flagStop) {
       break;
+    } else {
+      RobotTask(command); // 100 ms
+    }
   }
 
   pthread_mutex_destroy(&SPIBus); // Let's be clean :)
