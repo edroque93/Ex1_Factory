@@ -1,13 +1,17 @@
 #ifndef INGENIALIB_H
 #define INGENIALIB_H
 
+#include <pthread.h> // Consider threads for C11 or any other sync utility
+#include <signal.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
-#include <unistd.h>
-#include <signal.h>
 #include <string.h>
 #include <sys/time.h>
+#include <unistd.h>
+
+extern volatile int flagStop;
+extern pthread_mutex_t SPIBus;
 
 void RobotTask(uint8_t u8Command);
 void RobotStop(void);
