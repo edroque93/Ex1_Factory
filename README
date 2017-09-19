@@ -4,4 +4,4 @@ Control flow implemented following instructions. To control exclusive access to 
 
 If compiled with the "DEBUG" flag, as it is set by default in the Makefile, we will be able to read what is happening on the system. Time is printed in ms at the beginning of the line.
 
-You will find a file called "ISP", there you can control what is reading the program. The main purpose is to simulate a "halt" caused by the sensor (values > 128).
+You will find a file called "ISP", there you can control what is reading the program. The main purpose is to simulate a "halt" caused by the sensor (values > 128). When this happen, the proper routine is called and we no longer send commands to the robot.
