@@ -12,6 +12,9 @@
 
 extern volatile int flagStop;
 extern pthread_mutex_t SPIBus;
+extern uint32_t intCount;
+
+struct itimerval timer;
 
 void RobotTask(uint8_t u8Command);
 void RobotStop(void);

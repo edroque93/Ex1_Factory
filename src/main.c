@@ -8,8 +8,14 @@
 
 volatile int flagStop;
 pthread_mutex_t SPIBus;
+uint32_t intCount;
 
 int main(void) {
+#ifdef DEBUG
+  printf("System startup\n");
+  fflush(stdout);
+#endif
+  intCount = 0;
   flagStop = 0;                      // We must remain in stop until reset
   pthread_mutex_init(&SPIBus, NULL); // C POSIX mutex
   SPIInit();

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -std=gnu99
+CFLAGS = -std=gnu99 -DDEBUG
 LDFLAGS = 
 FORMAT = clang-format-3.8
 SOURCES = $(shell find src/ -iname *.c)
