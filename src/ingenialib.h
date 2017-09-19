@@ -16,6 +16,8 @@ extern uint32_t intCount;
 
 struct itimerval timer;
 
+void delay(uint32_t us);
+
 void RobotTask(uint8_t u8Command);
 void RobotStop(void);
 void TimerInit(void);

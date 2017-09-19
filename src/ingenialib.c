@@ -3,6 +3,7 @@
 // Assume all other code time is 0 us.
 
 void delay(uint32_t us) {
+  // Or a proper built-in low power delay...
   struct timeval tv;
   unsigned long start, end;
   gettimeofday(&tv, NULL);
