@@ -2,6 +2,6 @@ Exercise 1
 
 Control flow implemented following instructions. To control exclusive access to the shared SPI bus a mutex was used (from C POSIX). On a real platform we could use atomic operators (e.g., avr-libc util/atomic.h). To control the sensor readings a timer from BSD Unix was used (on a real platform a built-in timer could be used instead).
 
-If compiled with the "DEBUG" flag, as it is set by default in the Makefile, we will be able to read what is happening on the system.
+If compiled with the "DEBUG" flag, as it is set by default in the Makefile, we will be able to read what is happening on the system. Time is printed in ms at the beginning of the line.
 
 You will find a file called "ISP", there you can control what is reading the program. The main purpose is to simulate a "halt" caused by the sensor (values > 128).
